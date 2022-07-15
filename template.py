@@ -19,6 +19,7 @@ for val1 in df_dummydata1.iloc[:,1]:
     for col in df_dummydata2.iloc[:,x]:
         if x <= 4:
             print(f"------------- Start Col {df_dummydata2.iloc[:,x].name} check --------------")
+            #adressing specific values in cols in the table, related to the case that had to be solved - scope to be adjusted here if required // inner inner loop (current: all values within 2nd to 4th col in table df_dummydata2)
             for val2 in df_dummydata2.iloc[:,x]:
                     Token_Set_Ratio = fuzz.token_set_ratio(val1,val2)
                     print(f'fuzzycheck: GP1 as {val1} vs GP2 {val2} results in {Token_Set_Ratio}% similarity')
